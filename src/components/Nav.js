@@ -1,5 +1,5 @@
+import React, { useState } from 'react';
 import PropTypes from "prop-types"
-import React, { useState } from "react"
 import Logo from "../images/Logo.png"
 import {
   Collapse,
@@ -17,13 +17,13 @@ const Navigation = (props) => {
   const toggle = () => setIsOpen(!isOpen);
   return (
     <div>
-      <Navbar color="white" light expand="md">
+      <Navbar className="Nav" color="white" light expand="md">
         <NavbarBrand href="/"><img src={Logo} /></NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-0" navbar>
             <NavItem>
-              <NavLink href="">Home</NavLink>
+              <NavLink href="">Main</NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="">Product</NavLink>

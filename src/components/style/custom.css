@@ -1,41 +1,170 @@
 
 /* slide.js */
-
+.slide{
+  position: relative;
+}
 .slide img {
   max-width: 100%;
   max-height: 673px;
   width: 100%;
   margin: 0px;
 }
-
 .slick-next {
-  right: 0px;
+  right: 46px;
   z-index: 999;
 }
 .slick-prev {
-  left: 0px;
+  left: 25px;
   z-index: 999;
 }
+.slick-prev, .slick-next {
+  font-size: 15px !important;
+}
+.slick-prev:before, .slick-next:before  {
+  content: '' !important;
+}
+.introuce{
+  height: 100%;
+  width: 100%;
+  padding: 8.7em 6.087em 0 6.130em;
+  z-index: 1;
+}
+.introuce h1{
+  font-size: 1.25em;
+  line-height: 1.5em;
+  font-weight:bolder;    
+  margin-bottom: 1.5rem;
+  word-break: break-all;
+}
+.introuce p{
+  font-size: 0.739em;
 
-
+}
 /* Nav.js */
 
 .navbar{
-  padding : 0 1em 0 1em
+  padding : 0.35em 6.130em 0 6.087em;
+}
+.navbar-brand{
+  padding-top: 0; 
+  padding-bottom: 0;
 }
 .mr-0{
   margin-left: auto!important;
 }
 
 /*intro.js*/
+.vision{
+  margin-top: 2.533em;
+  margin-bottom: 2.592em;
+}
+.product{
+  margin-top: 4.625em;
+ 
+}
+.youtube{
+  position: relative;
+  height: 0;
+  padding-bottom: 56.25%;
+}
+.Service_btn{
+  border-radius: 50%;
+  width: 7.708em;
+  height: auto;
+  
+}
+.Service_btn:hover{
 
+}
+.Service_btn img{
+  width: 7.708em;
+}
+.center{
 
+  text-align: center;
 
+}
+.wrapper{
+  height:auto;
+  margin:auto;
+  overflow:hidden;
+  
+}
+.image-container {
+  float:left;
+  position:relative;
+  cursor:pointer;
+}
+.image-container img{
+  position:absolute;
+}
+
+.image-caption {
+  width:100%;
+  height:100%;
+  background:rgba(0, 0, 0, 0.7);
+  position:absolute; 
+  opacity:0; 
+  transition:all 300ms ease-in-out;
+ -webkit-transition:all 300ms ease-in-out;
+ -moz-transition:all 300ms ease-in-out;
+ -o-transition:all 300ms ease-in-out;
+ -ms-transition:all 300ms ease-in-out;
+}
+
+.image-caption h1{
+  padding:45px 0px 5px 0px;
+  text-align:center;
+  margin-left:-15px;
+  text-transform:uppercase;
+  font-family: 'Indie Flower', cursive;
+  font-size:25px;
+  color:#00bfb6;
+}
+
+.image-caption p{
+  text-align:center; 
+  font-family: 'Overpass Mono', monospace;
+  color:#fff;
+}
+
+.image-container:hover .image-caption{
+  opacity:1;
+}
 /*footer.js*/
 
 footer{
   height: 200px;
-  background-color: #83dadd;
+  background-color: #95d7d9;
   text-align: right;
 }
+/*일단 노가다 뛰고 나중에 JS코드로 수신할 예정.. 반응형 FUCK*/
+@media (max-width:360px){html{font-size:13px;}}
 
+@media (min-width:361px) and (max-width:399px){html{font-size:14px;}}
+
+@media (min-width:400px) and (max-width:439px){html{font-size:14px;}}
+
+@media (min-width:440px) and (max-width:479px){html{font-size:14px;}}
+
+@media (min-width:480px) and (max-width:519px){html{font-size:14px;}}
+
+@media (min-width:520px) and (max-width:559px){html{font-size:15px;}}
+
+@media (min-width:560px) and (max-width:599px){html{font-size:16px;}}
+
+@media (min-width:600px) and (max-width:639px){html{font-size:17px;}}
+
+@media (min-width:640px) and (max-width:679px){html{font-size:18px;}}
+
+@media (min-width:680px) and (max-width:719px){html{font-size:19px;}}
+
+@media (min-width:720px) and (max-width:759px){html{font-size:20px;}}
+
+@media (min-width:760px) and (max-width:799px){html{font-size:21px;}}
+
+@media (min-width:800px) and (max-width:839px){html{font-size:22px;}}
+
+@media (min-width:840px) and (max-width:879px){html{font-size:23px;}}
+
+@media (min-width:880px){html{font-size:24px;}}

@@ -34,8 +34,11 @@ const Layout = ({ children }) => {
       <Slide />
       <div>
         {/*<main>{children}</main>*/}
+
+
         <Intro />
         <Footer />
+
       </div>
     </>
   )
