@@ -16,7 +16,6 @@ import Slide from "./slide"
 import Intro from "./intro"
 import Footer from "./footer"
 import "./style/custom.css"
-
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {

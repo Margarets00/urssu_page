@@ -1,4 +1,18 @@
 
+@font-face{
+  font-family: "NotoSansKRRegualr";
+
+  src:url(./font/NotoSansKR-Medium.otf);
+}
+@font-face{
+  font-family: "NotoSansKRBold";
+
+  src:url(./font/NotoSansKR-Black.otf);
+}
+html,body{
+  font-family: NotoSansKRRegualr;
+  font-style: normal;
+}
 /* slide.js */
 .slide{
   position: relative;
@@ -41,9 +55,22 @@
 
 }
 /* Nav.js */
-
+.navbar-expand-md .navbar-nav .nav-link{
+  margin-right: 1.042rem;
+  margin-left: 1.042em;
+  padding: 0;
+  font-size: 0.625em;
+}
 .navbar{
   padding : 0.35em 6.130em 0 6.087em;
+}
+.navbar-light .navbar-nav .nav-link{
+  color:black;
+}
+.navbar-expand-md .navbar-nav > li > a:hover {
+  font-weight: bolder;
+  color:black !important;
+  border-bottom: #00bfb6 solid 3px;
 }
 .navbar-brand{
   padding-top: 0; 
@@ -54,13 +81,40 @@
 }
 
 /*intro.js*/
+.header{
+  font-family: NotoSansKRBold;
+  font-style: normal;
+}
 .vision{
   margin-top: 2.533em;
   margin-bottom: 2.592em;
 }
+.vision_icon img{
+  width: 5.542em;
+}
+.vision_icon p{
+  margin-top:1.083em;
+}
+.vision_border{
+  position: relative;
+}
+.vision_border:after{
+  content: "";
+  background: #dbdbdb;
+  position: absolute;
+  bottom: 1.458em;
+  left: 0;
+  height: 75%;
+  width: 1px;
+
+}
 .product{
-  margin-top: 4.625em;
- 
+  margin: 4.625em 0 0 0;
+}
+.list li{
+  list-style-type: '-';
+  padding: 0 0 0 0.208em;
+  width: 100%;
 }
 .youtube{
   position: relative;
@@ -134,9 +188,15 @@
 /*footer.js*/
 
 footer{
-  height: 200px;
+  height: 228px;
   background-color: #95d7d9;
   text-align: right;
+  margin-top: 5.625em;
+  padding : 2.779em 5.883em 2.288em 0;
+}
+footer h3{
+  margin:0;
+  font-family: NotoSansKRBold;
 }
 /*일단 노가다 뛰고 나중에 JS코드로 수신할 예정.. 반응형 FUCK*/
 @media (max-width:360px){html{font-size:13px;}}
