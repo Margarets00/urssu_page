@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react"
 import PropTypes from "prop-types"
 import Logo from "../images/Logo.png"
 import {
@@ -12,13 +12,15 @@ import {
   NavbarText,
 } from "reactstrap"
 
-const Navigation = (props) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const toggle = () => setIsOpen(!isOpen);
+const Navigation = props => {
+  const [isOpen, setIsOpen] = useState(false)
+  const toggle = () => setIsOpen(!isOpen)
   return (
     <div>
       <Navbar className="Nav" color="white" light expand="md">
-        <NavbarBrand href="/"><img src={Logo} /></NavbarBrand>
+        <NavbarBrand href="/">
+          <img src={Logo} />
+        </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-0" navbar>
@@ -41,7 +43,7 @@ const Navigation = (props) => {
         </Collapse>
       </Navbar>
     </div>
-  );
+  )
 }
 Navbar.propTypes = {
   light: PropTypes.bool,
@@ -50,13 +52,12 @@ Navbar.propTypes = {
   color: PropTypes.string,
   role: PropTypes.string,
   expand: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
-  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string])
+  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   // pass in custom element to use
 }
 NavbarText.propTypes = {
-  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string])
+  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   // pass in custom element to use
 }
-
 
 export default Navigation

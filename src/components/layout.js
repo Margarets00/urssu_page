@@ -5,7 +5,7 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
+import React, { Component, useEffect } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -26,7 +26,6 @@ const Layout = ({ children }) => {
       }
     }
   `)
-
   return (
     <>
       <Navigation />
@@ -34,10 +33,8 @@ const Layout = ({ children }) => {
       <div>
         {/*<main>{children}</main>*/}
 
-
         <Intro />
         <Footer />
-
       </div>
     </>
   )

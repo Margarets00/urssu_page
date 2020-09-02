@@ -1,17 +1,13 @@
-import React from "react"
-import { Container, Row, Col } from 'reactstrap';
+import React, { useRef } from "react"
+import { Container, Row, Col } from "reactstrap"
 
 import top from "../images/top.png"
 import bulb from "../images/lightbulb-on-outline-inside-a-circle.png"
 import develop from "../images/develop.png"
-import Logo from "../images/Logo@3x.png"
-import Ground from "../images/Ground.png"
-import food from "../images/subob.png"
-import notice from "../images/notissu.png"
 import Service_plan from "../images/Service_plan.png"
 import Service_marketing from "../images/Service_marketing.png"
 import Service_HR from "../images/Service_HR.png"
-import Service_Contentes from "../images/Service_Contentes.png"
+import Service_Contentes from "../images/Service_contents.png"
 import Service_UXUI from "../images/Service_UXUI.png"
 import Service_backend from "../images/Service_backend.png"
 import Service_frontend from "../images/Service_frontend.png"
@@ -20,113 +16,457 @@ import Service_IOS from "../images/Service_IOS.png"
 import Service_machinelearning from "../images/Service_machinelearning.png"
 
 const Intro = () => (
-    <>
-        <Container className="center">
-            <div className="vision header">
-                <h1 style={{ fontSize: "1.417em" }}>Vision</h1>
+  <>
+    <Container className="center">
+      <div className="vision header center">
+        <h1 style={{ fontSize: "1.417em" }}>Vision</h1>
+      </div>
+      <Row
+        className="vision_icon"
+        xs="3"
+        md="3"
+        style={{ fontSize: "0.708em" }}
+      >
+        <Col>
+          <img src={top} />
+          <p>도전</p>
+        </Col>
+        <Col className="vision_border">
+          <img src={bulb} />
+          <p>창조</p>
+        </Col>
+        <Col className="vision_border">
+          <img src={develop} />
+          <p>협력</p>
+        </Col>
+      </Row>
+      <div>
+        <p
+          className="product"
+          style={{ fontSize: "0.833em", textAlign: "left" }}
+        >
+          Product
+        </p>
+      </div>
+      <Row style={{ textAlign: "left" }}>
+        <Col xs="4" className="">
+          <h1
+            style={{
+              fontSize: "1.75em",
+              wordBreak: "keep-all",
+              paddingRight: "0",
+              fontWeight: "900",
+            }}
+          >
+            유어슈가
+            <br />
+            제공하는 서비스
+          </h1>
+        </Col>
+        <Col xs="8" style={{ fontSize: "0.792em", wordBreak: "keep-all" }}>
+          <ul className="list" style={{ paddingLeft: "10px" }}>
+            <li>
+              {" "}
+              IT는 사용자에게 직접적으로 결과물을 제공해주고 가치를 전달하는
+              것이 목적입니다.
+            </li>
+            <li>
+              {" "}
+              유어슈는 단순히 스터디와 생각에 그치지 않고 결과물을 만드는 것에
+              목적을 둡니다.
+            </li>
+            <li>
+              {" "}
+              유어슈는 지금까지 숭실대학교 학우들의 즐거운 캠퍼스 라이프를 위해
+              다양한 서비스를 개발하고 제공해왔습니다.
+            </li>
+          </ul>
+        </Col>
+      </Row>
+
+      <Row xs="2" className="Service-box">
+        <Col className="S-box-line-one">
+          <div className="image-container div-center">
+            <div className="image-logo">
+              <img
+                src={require("../images/Logo@3x.png")}
+                style={{ width: "14.208em" }}
+              />
             </div>
-            <Row className="vision_icon" xs="3" md="3" style={{ fontSize: "0.708em" }}>
-                <Col><img src={top} /><p>도전</p></Col>
-                <Col className="vision_border" >
-                    <img src={bulb} /><p>창조</p>
-                </Col>
-                <Col className="vision_border"><img src={develop} /><p>협력</p></Col>
-            </Row>
-            <div>
-                <p className="product" style={{ fontSize: "0.833em", textAlign: "left" }}>Product</p>
+
+            <div className="image-caption">
+              <h1>Yourssu Web/App</h1>
+              <p>
+                유어슈 공식 어플리케이션. 각종 정보 및 커뮤니티를 운영합니다.
+              </p>
             </div>
-            <Row style={{ textAlign: "left"}}>
-                <Col xs="auto" className="header">
-                    <h1 style={{ fontSize: "1.75em",wordBreak: "keep - all" }}>유어슈가<br />제공하는 서비스</h1>
-                </Col>
-                <Col xs="auto" style={{ fontSize: "0.792em", wordBreak:"keep-all"}}>
-                    <ul className="list">
-                        <li> IT는 사용자에게 직접적으로 결과물을 제공해주고 가치를 전달하는 것이 목적입니다.</li>
-                        <li> 유어슈는 단순히 스터디와 생각에 그치지 않고 결과물을 만드는 것에 목적을 둡니다.</li>
-                        <li> 유어슈는 지금까지 숭실대학교 학우들의 즐거운 캠퍼스 라이프를 위해 다양한 서비스를 개발하고 제공해왔습니다.</li>
-                    </ul>
-                </Col>
-            </Row>
-            {/* 
-            <Row md="2" xs="2" className="wrapper" >
-                <Col>
-                    <div className="image-container">
-                        <img src={Logo} />
-                        <div className="image-caption">
-                            <h1>Yourssu Web/App</h1><p>유어슈 공식 어플리케이션. 각종 정보 및 커뮤니티를 운영합니다.</p>
-                        </div>
-                    </div>
-                </Col>
-                <Col>
-                    <div className="image-container">
-                        <img src={Ground} />
-                    </div>
-                    <div className="image-caption">
-                        <h1>Yourssu Web/App</h1><p>유어슈 공식 어플리케이션. 각종 정보 및 커뮤니티를 운영합니다.</p>
-                    </div>
-                </Col>
-            </Row>
-            <Row md="2" xs="2">
-                <Col>
-                    <div className="image-container">
-                        <img src={food} />
-                        <div className="image-caption">
-                            <h1>Yourssu Web/App</h1><p>유어슈 공식 어플리케이션. 각종 정보 및 커뮤니티를 운영합니다.</p>
-                        </div>
-                    </div>
-                </Col>
-                <Col>
-                    <div className="image-container">
-                        <img src={notice} />
-                        <div className="image-caption">
-                            <h1>Yourssu Web/App</h1><p>유어슈 공식 어플리케이션. 각종 정보 및 커뮤니티를 운영합니다.</p>
-                        </div>
-                    </div>
-                </Col>
-            </Row>*/}
-            <div style={{margin:"8.292em 0 2.583em 0"}}>
-                <p style={{ fontSize: "0.833em" }}>About</p>
-                <h1 className="header" style={{ fontSize: "1.667em" }}>유어슈 소개 영상</h1>
-                <p style={{ fontSize: "0.875em" }}>유어슈는 단순히 서비스를 구현하는 것을 넘어서서<br />현실의 문제들을 해결하고 세상을 더 아름답게 만들어나갑니다.</p>
+          </div>
+        </Col>
+        <Col className="S-box-line-two">
+          <div className="image-container div-center">
+            <div className="image-logo">
+              <img
+                src={require("../images/Ground.png")}
+                style={{ width: "16em" }}
+              />
             </div>
-            <div className="youtube" style={{ textAlign: "start" }}>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/6C7peck8xh8" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen style={{ position: "absolute", width: "100%", height: "100%" }}></iframe>
+            <div className="image-caption">
+              <h1>Ground Android/iOS</h1>
+              <p>숭실대학교 학우들을 위한 커뮤니티 서비스, 그라운드</p>
             </div>
-            <div style={{margin:"7.5em 0 4.167em 0" }}>
-            <h1 className="header" style={{ fontSize: "1.667em"}}>Service</h1>
-            <p style={{ fontSize: "0.875em" }}>유어슈는 다양한 팀들과 함께 합니다 </p>
+          </div>
+        </Col>
+        <Col className="S-box-line-three">
+          <div className="image-container div-center">
+            <div className="image-logo">
+              <img
+                src={require("../images/subob.png")}
+                style={{ width: "14.208em" }}
+              />
             </div>
-            <Row md="5" xs="5" style={{ fontSize: "1.083em" }}>
-                <Col><div className="Service_btn"><img src={Service_plan} /></div><p>기획</p></Col>
-                <Col><div className="Service_btn"><img src={Service_marketing} /></div><p>마케팅</p></Col>
-                <Col><div className="Service_btn"><img src={Service_HR} /></div><p>HR</p></Col>
-                <Col><div className="Service_btn"><img src={Service_Contentes} /></div><p>콘텐츠</p></Col>
-                <Col><div className="Service_btn"><img src={Service_UXUI} /></div><p>UX/UI</p></Col>
-                <Col><div className="Service_btn"><img src={Service_backend} /></div><p>back-end</p></Col>
-                <Col><div className="Service_btn"><img src={Service_frontend} /></div><p>front-end</p></Col>
-                <Col><div className="Service_btn"><img src={Service_android} /></div><p>Android</p></Col>
-                <Col><div className="Service_btn"><img src={Service_IOS} /></div><p>IOS</p></Col>
-                <Col><div className="Service_btn"><img src={Service_machinelearning} /></div><p>Machine<br />Learning</p></Col>
-            </Row>
-            <div style={{margin:"9.250em 0 2.5em 0"}}>
-                <h1 className="header" style={{ fontSize: "1.667em" }}>유어슈 보도자료</h1>
-                <p style={{ fontSize: "0.875em" }}>다양한 외부업체들에 소개된 유어슈 보도자료 및 영상입니다</p>
+            <div className="image-caption">
+              <h1>슈밥 Android/iOS</h1>
+              <p>숭실대학교 주변 상권 맛집 소개 어플리케이션</p>
             </div>
-            <div className="youtube" style={{ textAlign: "start" }}>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/6C7peck8xh8" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen style={{ position: "absolute", width: "100%", height: "100%" }}></iframe>
+          </div>
+        </Col>
+        <Col className="S-box-line-four ">
+          <div className="image-container div-center">
+            <div className="image-logo">
+              <img
+                src={require("../images/notissu.png")}
+                style={{ width: "7.167em" }}
+              />
             </div>
-            <div style={{margin:"6.667em 0 3.333em 0"}}>
-            <h1 className="header" style={{ fontSize: "1.667em" }}>Contact</h1>
-            <p style={{ fontSize: "0.875em" }}>유어슈와 소통하고 싶으신가요? 아래의 채널에서 함께해요</p>
+            <div className="image-caption">
+              <h1>노티슈 Android/iOS</h1>
+              <p>숭실대 모든 학부 공지를 알려주는 학과 공지 서비스</p>
             </div>
-            <Row md="4" xs="2" style={{ fontSize: "0.708em" }}>
-                <Col><img src={top} /><p>플러스친구</p></Col>
-                <Col><img src={top} /><p>인스타그램</p></Col>
-                <Col><img src={top} /><p>페이스북</p></Col>
-                <Col><img src={top} /><p>기술블로그</p></Col>
-            </Row>
-        </Container>
-    </>
+          </div>
+        </Col>
+      </Row>
+      <div style={{ margin: "8.292em 0 2.583em 0" }}>
+        <p style={{ fontSize: "0.833em" }}>About</p>
+        <h1
+          className="header center"
+          style={{ fontSize: "1.667em", fontWeight: "900" }}
+        >
+          유어슈 소개 영상
+        </h1>
+        <p style={{ fontSize: "0.875em" }}>
+          유어슈는 단순히 서비스를 구현하는 것을 넘어서서
+          <br />
+          현실의 문제들을 해결하고 세상을 더 아름답게 만들어나갑니다.
+        </p>
+      </div>
+      <div className="youtube" style={{ textAlign: "start" }}>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/uFTcY3_TvIs"
+          frameBorder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          style={{ position: "absolute", width: "100%", height: "100%" }}
+        ></iframe>
+      </div>
+      <div style={{ margin: "7.5em 0 4.167em 0" }}>
+        <h1 className="header bold" style={{ fontSize: "1.667em" }}>
+          Service
+        </h1>
+        <p style={{ fontSize: "0.875em" }}>
+          유어슈는 다양한 팀들과 함께 합니다{" "}
+        </p>
+      </div>
+      <Row classNmae="Service" md="5" xs="5" style={{ height: "20.625em" }}>
+        <Col>
+          <div className="Service_btn">
+            <div class="circle div-center orange">
+              <img src={Service_plan} />
+            </div>
+            <div class="back_circle bg_orange"></div>
+          </div>
+
+          <p>기획</p>
+        </Col>
+        <Col className="">
+          <div className="Service_btn ">
+            <div class="circle div-center orange">
+              <img src={Service_marketing} />
+            </div>
+            <div class="back_circle bg_orange"></div>
+          </div>
+          <p>마케팅</p>
+        </Col>
+        <Col>
+          <div className="Service_btn">
+            <div class="circle div-center orange">
+              <img src={Service_HR} />
+            </div>
+            <div class="back_circle bg_orange"></div>
+          </div>
+          <p>HR</p>
+        </Col>
+        <Col>
+          <div className="Service_btn">
+            <div class="circle div-center red">
+              <img src={Service_Contentes} />
+            </div>
+            <div class="back_circle bg_red"></div>
+          </div>
+          <p>콘텐츠</p>
+        </Col>
+        <Col>
+          <div className="Service_btn">
+            <div class="circle div-center red">
+              <img src={Service_UXUI} />
+            </div>
+            <div class="back_circle bg_red"></div>
+          </div>
+          <p>UX/UI</p>
+        </Col>
+        <Col>
+          <div className="Service_btn">
+            <div class="circle div-center green">
+              <img src={Service_backend} />
+            </div>
+            <div class="back_circle bg_green"></div>
+          </div>
+          <p>back-end</p>
+        </Col>
+        <Col>
+          <div className="Service_btn">
+            <div class="circle div-center green">
+              <img src={Service_frontend} />
+            </div>
+            <div class="back_circle bg_green"></div>
+          </div>
+          <p>front-end</p>
+        </Col>
+        <Col>
+          <div className="Service_btn">
+            <div class="circle div-center green">
+              <img src={Service_android} />
+            </div>
+            <div class="back_circle bg_green"></div>
+          </div>
+          <div className="Service-name">
+            <p>Android</p>
+          </div>
+        </Col>
+        <Col>
+          <div className="Service_btn">
+            <div class="circle div-center green">
+              <img src={Service_IOS} />
+            </div>
+            <div class="back_circle bg_green"></div>
+          </div>
+          <p>IOS</p>
+        </Col>
+        <Col>
+          <div className="Service_btn">
+            <div class="circle div-center green">
+              <img src={Service_machinelearning} />
+            </div>
+            <div class="back_circle bg_green"></div>
+          </div>
+          <p>
+            Machine
+            <br />
+            Learning
+          </p>
+        </Col>
+      </Row>
+      <div style={{ margin: "9.250em 0 2.5em 0" }}>
+        <h1 className="header bold" style={{ fontSize: "1.667em" }}>
+          유어슈 보도자료
+        </h1>
+        <p style={{ fontSize: "0.875em" }}>
+          다양한 외부업체들에 소개된 유어슈 보도자료 및 영상입니다
+        </p>
+      </div>
+      <div className="youtube" style={{ textAlign: "start" }}>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/1vnU9m7xTaQ"
+          frameBorder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          style={{ position: "absolute", width: "100%", height: "100%" }}
+        ></iframe>
+      </div>
+      <div style={{ margin: "6.667em 0 3.333em 0" }}>
+        <h1 className="header bold" style={{ fontSize: "1.667em" }}>
+          Cooperation
+        </h1>
+        <p style={{ fontSize: "0.875em" }}>
+          실제 IT 회사에서 사용하는 협업툴, 유어슈에서 경험할 수 있습니다.
+          <br />
+          많은 사람이 모여서 작업하는 환경을 경험하고 더 나은 협업 방법을 찾기
+          <br />
+          위해 항상 노력합니다.
+        </p>
+      </div>
+      <Row className="Cooper-box div-center" md="12">
+        <div className="cooper-line">
+          <div
+            className="cooper-icon div-center"
+            style={{
+              right: "100%",
+              top: "0",
+            }}
+          >
+            <div className="cooper-text-upper">Slack</div>
+            <img src={require("../images/Cooperation-slack.png")} />
+            <div className="cooper-bg"></div>
+            <div
+              className="cooper-bg-hover"
+              style={{
+                transform: "rotate( 30deg )",
+                WebkitBackdropFilter: "blur(5px)",
+                backdropFilter: "blur(5px)",
+                backgroundImage:
+                  "linear-gradient(to bottom,#e01e5a,#ecb22e 37%, #2eb67d 74%, #36c5f0)",
+              }}
+            ></div>
+          </div>
+          <div
+            className="cooper-icon div-center"
+            style={{
+              right: "50%",
+              top: "0",
+            }}
+          >
+            <div className="cooper-text-upper">Notion</div>
+            <img src={require("../images/Cooperation-notion.png")} />
+            <div className="cooper-bg"></div>
+            <div
+              className="cooper-bg-hover"
+              style={{ backgroundColor: "black" }}
+            ></div>
+          </div>
+          <div
+            className="cooper-icon div-center"
+            style={{
+              right: "0",
+              top: "0",
+            }}
+          >
+            <div className="cooper-text-upper">G Suite</div>
+            <p>G</p>
+            <div className="cooper-bg"></div>
+            <div
+              className="cooper-bg-hover"
+              style={{
+                backgroundColor: "#ea4335",
+              }}
+            ></div>
+          </div>
+          <div
+            className="cooper-icon div-center"
+            style={{
+              right: "100%",
+              top: "100%",
+            }}
+          >
+            <img src={require("../images/Cooperation-gitlab.png")} />
+            <div className="cooper-bg"></div>
+            <div
+              className="cooper-bg-hover"
+              style={{
+                transform: "rotate( 300deg )",
+                backgroundImage:
+                  "linear-gradient(to bottom, #fca121, #fc6d26 52%, #db3b21)",
+              }}
+            ></div>
+            <div className="cooper-text-lower">GitLab</div>
+          </div>
+          <div
+            className="cooper-icon div-center"
+            style={{
+              right: "50%",
+              top: "100%",
+            }}
+          >
+            <img
+              style={{ filter: "brightness(2)" }}
+              src={require("../images/Cooperation-github.png")}
+            />
+            <div className="cooper-bg"></div>
+            <div
+              className="cooper-bg-hover"
+              style={{ backgroundColor: "black" }}
+            ></div>
+            <div className="cooper-text-lower">GitHub</div>
+          </div>
+          <div
+            className="cooper-icon div-center"
+            style={{ right: "0%", top: "100%" }}
+          >
+            <img src={require("../images/Cooperation-zeplin.png")} />
+            <div className="cooper-bg"></div>
+            <div
+              className="cooper-bg-hover"
+              style={{
+                transform: "rotate( 30deg )",
+                backgroundImage:
+                  "linear-gradient(to bottom, #f0670a, #f89920 37%, #ffbe22 66%, #ffd00e)",
+              }}
+            ></div>
+            <div className="cooper-text-lower">Zeplin</div>
+          </div>
+        </div>
+      </Row>
+      <div style={{ margin: "6.667em 0 3.333em 0" }}>
+        <h1 className="header bold" style={{ fontSize: "1.667em" }}>
+          Contact
+        </h1>
+        <p style={{ fontSize: "0.875em" }}>
+          유어슈와 소통하고 싶으신가요? 아래의 채널에서 함께해요
+        </p>
+      </div>
+      <Row
+        className="contact-box div-center"
+        md="4"
+        xs="4"
+        style={{ fontSize: "0.708em" }}
+      >
+        <Col>
+          <div className="contact-icon">
+            <img src={require("../images/contact-kakao.png")} />
+            <img src={require("../images/contact-kakao-hover.png")} />
+          </div>
+          <p>플러스친구</p>
+        </Col>
+        <Col>
+          <div className="contact-icon">
+            <img src={require("../images/contact-insta.png")} />
+            <img src={require("../images/contact-insta-hover.png")} />
+          </div>
+          <div className="contact-text">
+            <p>인스타그램</p>
+          </div>
+        </Col>
+        <Col>
+          <div className="contact-icon">
+            <img src={require("../images/contact-facebook.png")} />
+            <img src={require("../images/contact-facebook-hover.png")} />
+          </div>
+          <div className="contact-text">
+            <p>페이스북</p>
+          </div>
+        </Col>
+        <Col>
+          <div className="contact-icon">
+            <img src={require("../images/contact-blog.png")} />
+            <img src={require("../images/contact-blog-hover.png")} />
+          </div>
+          <p>기술블로그</p>
+        </Col>
+      </Row>
+    </Container>
+  </>
 )
 
 export default Intro
