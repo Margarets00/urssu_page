@@ -2,7 +2,7 @@ import React from "react"
 import Slider from "react-slick"
 
 import one from "../images/bg_1.jpg"
-import two from "../images/bg_2.jpg"
+import two from "../images/bg_error_fix_2.jpg"
 import three from "../images/bg_3.jpg"
 
 import "slick-carousel/slick/slick.css"
