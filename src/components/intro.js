@@ -42,9 +42,9 @@ const Intro = ({ name }) => {
       deviceIs = 0
       console.log("its pc")
     } else if (Device.isIOS) {
-      deviceIs = 1
-    } else {
       deviceIs = 2
+    } else {
+      deviceIs = 1
     }
     console.log(Device.osName)
   }, [])
