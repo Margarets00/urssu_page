@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from "react"
 import Scroll from "react-scroll"
 import { Container, Row, Col } from "reactstrap"
-import { isBrowser, isMobile } from "react-device-detect"
+import * as Device from "react-device-detect"
 
 import Slide from "./slide"
 import top from "../images/top.png"
@@ -21,9 +21,36 @@ import Service_machinelearning from "../images/Service_machinelearning.png"
 const Intro = ({ name }) => {
   var Element = Scroll.Element
   var scroller = Scroll.scroller
+  var link_ = {
+    //web,android,ios 순서, 그라운드 클릭시 android 일경우 -> link.ground[1] 의 주소 반환
+    yourssu: ["http://intro.yourssu.com/"],
+    ground: [
+      "http://intro.yourssu.com/",
+      "https://play.google.com/store/apps/details?id=com.yourssu.ground",
+      "https://apps.apple.com/kr/app/%EA%B7%B8%EB%9D%BC%EC%9A%B4%EB%93%9C/id1483838254",
+    ],
+    ssubob: [""],
+    notissu: [
+      "",
+      "https://play.google.com/store/apps/details?id=com.yourssu.notissu",
+      "https://apps.apple.com/kr/app/notissu/id1488050194",
+    ],
+  }
+  var deviceIs = 0
   useEffect(() => {
-    console.log(name)
-    scroller.scrollTo(name, { duration: 1000, smooth: true, offset: -100 })
+    if (Device.isBrowser) {
+      deviceIs = 0
+      console.log("its pc")
+    } else if (Device.isIOS) {
+      deviceIs = 1
+    } else {
+      deviceIs = 2
+    }
+    console.log(Device.osName)
+  }, [])
+  useEffect(() => {
+    //console.log(name)
+    scroller.scrollTo(name, { duration: 1000, smooth: true, offset: -120 })
   }, name)
 
   return (
@@ -107,7 +134,7 @@ const Intro = ({ name }) => {
               </div>
               <a
                 className="link"
-                href="https://play.google.com/store/apps/details?id=com.yourssu.yanghwabridge"
+                href={link_.yourssu[deviceIs]}
                 target="_blank"
               >
                 <div className="image-caption">
@@ -162,10 +189,12 @@ const Intro = ({ name }) => {
                   style={{ width: "5.167em" }}
                 />
               </div>
-              <div className="image-caption">
-                <h1>노티슈 Android/iOS</h1>
-                <p>숭실대 모든 학부 공지를 알려주는 학과 공지 서비스</p>
-              </div>
+              <a className="link" href={link_.notissu[deviceIs]} target="blank">
+                <div className="image-caption">
+                  <h1>노티슈 Android/iOS</h1>
+                  <p>숭실대 모든 학부 공지를 알려주는 학과 공지 서비스</p>
+                </div>
+              </a>
             </div>
           </Col>
         </Row>

@@ -21,7 +21,7 @@ const Navigation = props => {
     setScrollTo(name)
   }
   useEffect(() => {
-    console.log(scrollTo)
+    //console.log(scrollTo)
   }, [scrollTo])
   return (
     <>
