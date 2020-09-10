@@ -1,5 +1,6 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
+import Intro from "./intro"
 import Logo from "../images/Logo.png"
 import {
   Collapse,
@@ -13,36 +14,66 @@ import {
 } from "reactstrap"
 
 const Navigation = props => {
+  const [scrollTo, setScrollTo] = useState("main")
   const [isOpen, setIsOpen] = useState(false)
   const toggle = () => setIsOpen(!isOpen)
+  const scrollWhere = name => {
+    setScrollTo(name)
+  }
+  useEffect(() => {
+    console.log(scrollTo)
+  }, [scrollTo])
   return (
-    <div>
-      <Navbar className="Nav" color="white" light expand="md">
-        <NavbarBrand href="/">
-          <img src={Logo} />
-        </NavbarBrand>
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className="mr-0" navbar>
-            <NavItem>
-              <NavLink href="">Main</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="">Product</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="/components/">About</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="/components/">Contact</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="/components/">Recrute</NavLink>
-            </NavItem>
-          </Nav>
-        </Collapse>
-      </Navbar>
-    </div>
+    <>
+      <div>
+        <Navbar className="Nav" fixed="top" color="white" light expand="md">
+          <NavbarBrand href="/">
+            <img src={Logo} />
+          </NavbarBrand>
+          <NavbarToggler onClick={toggle} />
+          <Collapse isOpen={isOpen} navbar>
+            <Nav className="mr-0" navbar>
+              <NavItem>
+                <NavLink
+                  onClick={() =>
+                    setScrollTo("main")
+                  } /*onClick={scrollWhere("main")}*/
+                >
+                  Main
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink
+                  onClick={() =>
+                    setScrollTo("product")
+                  } /*onClick={scrollWhere("product")}*/
+                >
+                  Product
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink onClick={() => setScrollTo("about")}>About</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink onClick={() => setScrollTo("contact")}>
+                  Contact
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink
+                  href="https://www.notion.so/2020-2-97b11c4ddebb408984e575d7672c5eec"
+                  target="_blank"
+                >
+                  Recruite
+                </NavLink>
+              </NavItem>
+            </Nav>
+          </Collapse>
+        </Navbar>
+      </div>
+
+      <Intro name={scrollTo} />
+    </>
   )
 }
 Navbar.propTypes = {

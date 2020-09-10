@@ -12,8 +12,6 @@ import { useStaticQuery, graphql } from "gatsby"
 import "bootstrap/dist/css/bootstrap.min.css"
 
 import Navigation from "./Nav"
-import Slide from "./slide"
-import Intro from "./intro"
 import Footer from "./footer"
 import "./style/custom.css"
 const Layout = ({ children }) => {
@@ -26,14 +24,12 @@ const Layout = ({ children }) => {
       }
     }
   `)
+
   return (
     <>
       <Navigation />
-      <Slide />
       <div>
         {/*<main>{children}</main>*/}
-
-        <Intro />
         <Footer />
       </div>
     </>

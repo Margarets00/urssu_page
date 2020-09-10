@@ -12,6 +12,15 @@ html,
 body {
   font-family: NotoSansKRRegualr;
   font-style: normal;
+  padding-top: 45px;
+}
+.nav-link {
+  cursor: pointer;
+}
+.link {
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 .bold {
   font-family: NotoSansKRBold;
