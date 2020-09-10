@@ -38,7 +38,7 @@ const Intro = ({ name }) => {
   }
   var deviceIs = 0
   useEffect(() => {
-    if (Device.isBrowser) {
+    if (Device.isMacOs || Device.isWindows) {
       deviceIs = 0
       console.log("its pc")
     } else if (Device.isIOS) {
