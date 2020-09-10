@@ -152,11 +152,7 @@ const Intro = ({ name }) => {
               <div className="image-logo div-center">
                 <img src={require("../images/Ground.png")} />
               </div>
-              <a
-                className="link"
-                href="https://play.google.com/store/apps/details?id=com.yourssu.ground"
-                target="_blank"
-              >
+              <a className="link" href={link_.ground[deviceIs]} target="_blank">
                 <div className="image-caption">
                   <h1>Ground Android/iOS</h1>
                   <p>숭실대학교 학우들을 위한 커뮤니티 서비스, 그라운드</p>
