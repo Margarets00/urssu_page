@@ -55,6 +55,9 @@ const Intro = ({ name }) => {
   if (device == -1) {
     return (
       <>
+        <Element name="main">
+          <Slide />
+        </Element>
         <h1>isLoading...</h1>
       </>
     )

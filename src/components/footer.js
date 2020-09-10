@@ -10,9 +10,6 @@ const Footer = () => (
         Built with {` `}
         <a href="https://www.gatsbyjs.org">Gatsby</a>
       </p>
-      <p>
-        you're using {Device.deviceType} and {Device.osName}
-      </p>
       <h3 style={{ fontSize: "0.917em" }}>yourssu.com@gmail.com</h3>
     </footer>
   </>
