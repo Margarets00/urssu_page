@@ -46,7 +46,7 @@ const Intro = ({ name }) => {
     } else {
       deviceIs = 1
     }
-    console.log(Device.osName)
+    console.log(deviceIs)
   }, [])
   useEffect(() => {
     //console.log(name)
@@ -78,7 +78,7 @@ const Intro = ({ name }) => {
           </Col>
           <Col className="vision_border">
             <img src={develop} />
-            <p>협력</p>
+            <p>협력{deviceIs}</p>
           </Col>
         </Row>
         <Element name="product">
