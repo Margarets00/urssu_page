@@ -47,7 +47,7 @@ const Intro = ({ name }) => {
       deviceIs = 1
     }
     console.log(deviceIs)
-  }, [])
+  }, name)
   useEffect(() => {
     //console.log(name)
     scroller.scrollTo(name, { duration: 1000, smooth: true, offset: -120 })
