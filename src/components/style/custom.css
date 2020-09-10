@@ -217,6 +217,7 @@ a:visited {
   position: absolute;
 }
 .image-caption {
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
