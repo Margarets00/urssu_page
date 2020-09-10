@@ -36,18 +36,18 @@ const Intro = ({ name }) => {
       "https://apps.apple.com/kr/app/notissu/id1488050194",
     ],
   }
-  var deviceIs = 4
+  const [device, SetDevice] = useState(-1)
   useEffect(() => {
     if (Device.isMacOs || Device.isWindows) {
-      deviceIs = 0
+      SetDevice(0)
       console.log("its pc")
     } else if (Device.isIOS) {
-      deviceIs = 2
+      SetDevice(2)
     } else {
-      deviceIs = 1
+      SetDevice(1)
     }
-    console.log(deviceIs)
-  }, name)
+    console.log(device)
+  }, [device])
   useEffect(() => {
     //console.log(name)
     scroller.scrollTo(name, { duration: 1000, smooth: true, offset: -120 })
@@ -78,7 +78,7 @@ const Intro = ({ name }) => {
           </Col>
           <Col className="vision_border">
             <img src={develop} />
-            <p>협력{deviceIs}</p>
+            <p>협력{device}</p>
           </Col>
         </Row>
         <Element name="product">
@@ -132,11 +132,7 @@ const Intro = ({ name }) => {
               <div className="image-logo div-center">
                 <img src={require("../images/Logo.png")} />
               </div>
-              <a
-                className="link"
-                href={link_.yourssu[deviceIs]}
-                target="_blank"
-              >
+              <a className="link" href={link_.yourssu[device]} target="_blank">
                 <div className="image-caption">
                   <h1>Yourssu Web/App</h1>
                   <p>
@@ -152,7 +148,7 @@ const Intro = ({ name }) => {
               <div className="image-logo div-center">
                 <img src={require("../images/Ground.png")} />
               </div>
-              <a className="link" href={link_.ground[deviceIs]} target="_blank">
+              <a className="link" href={link_.ground[device]} target="_blank">
                 <div className="image-caption">
                   <h1>Ground Android/iOS</h1>
                   <p>숭실대학교 학우들을 위한 커뮤니티 서비스, 그라운드</p>
@@ -185,7 +181,7 @@ const Intro = ({ name }) => {
                   style={{ width: "5.167em" }}
                 />
               </div>
-              <a className="link" href={link_.notissu[deviceIs]} target="blank">
+              <a className="link" href={link_.notissu[device]} target="blank">
                 <div className="image-caption">
                   <h1>노티슈 Android/iOS</h1>
                   <p>숭실대 모든 학부 공지를 알려주는 학과 공지 서비스</p>
