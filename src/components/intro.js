@@ -36,7 +36,7 @@ const Intro = ({ name }) => {
       "https://apps.apple.com/kr/app/notissu/id1488050194",
     ],
   }
-  var deviceIs = 0
+  var deviceIs = 4
   useEffect(() => {
     if (Device.isMacOs || Device.isWindows) {
       deviceIs = 0
