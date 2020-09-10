@@ -12,10 +12,13 @@ html,
 body {
   font-family: NotoSansKRRegualr;
   font-style: normal;
-  padding-top: 45px;
+  padding-top: 1.731em;
 }
 .nav-link {
   cursor: pointer;
+}
+.navbar-brand img {
+  width: 3.385em;
 }
 .link {
   position: absolute;
@@ -40,11 +43,11 @@ body {
   margin: 0px;
 }
 .slick-next {
-  right: 46px;
+  right: 1.76em;
   z-index: 999;
 }
 .slick-prev {
-  left: 25px;
+  left: 0.962em;
   z-index: 999;
 }
 .slick-prev,
@@ -252,6 +255,9 @@ body {
   width: 24.167em;
   height: 18.958em;
 }
+.image-logo img {
+  width: 9em;
+}
 .Service-box .S-box-line-one {
   border-right: 1px solid #d8d8d8;
   border-bottom: 1px solid #d8d8d8;
@@ -370,24 +376,33 @@ footer h3 {
   font-family: NotoSansKRBold;
 }
 
-@media (min-width: 400px) and (max-width: 769px) {
+@media (max-width: 769px) {
   html {
     font-size: 12px !important;
   }
+  .fa-2x {
+    font-size: 1em;
+  }
+  .introuce {
+    padding: 5.7em 4.087em 0 4.13em;
+  }
   .Service_btn {
-    width: 5.5em;
-    height: 6.61em;
+    width: 3.5em;
+    height: 4.61em;
   }
   .Service_btn img {
     width: 70%;
   }
   .circle,
   .back_circle {
-    width: 5.5em;
-    height: 5.5em;
+    width: 3.5em;
+    height: 3.5em;
   }
   .slide .slide-img {
     height: 19.5em;
+  }
+  .navbar {
+    padding: 0.35em 1em 0 0;
   }
 }
 

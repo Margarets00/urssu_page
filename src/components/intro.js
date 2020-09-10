@@ -19,12 +19,13 @@ import Service_IOS from "../images/Service_IOS.png"
 import Service_machinelearning from "../images/Service_machinelearning.png"
 
 const Intro = ({ name }) => {
+  var Element = Scroll.Element
+  var scroller = Scroll.scroller
   useEffect(() => {
     console.log(name)
     scroller.scrollTo(name, { duration: 1000, smooth: true, offset: -100 })
   }, name)
-  var Element = Scroll.Element
-  var scroller = Scroll.scroller
+
   return (
     <>
       <Element name="main">
@@ -101,11 +102,8 @@ const Intro = ({ name }) => {
         <Row xs="2" className="Service-box">
           <Col className="S-box-line-one">
             <div className="image-container div-center">
-              <div className="image-logo">
-                <img
-                  src={require("../images/Logo@3x.png")}
-                  style={{ width: "14.208em" }}
-                />
+              <div className="image-logo div-center">
+                <img src={require("../images/logo.png")} />
               </div>
               <a
                 className="link"
@@ -124,11 +122,8 @@ const Intro = ({ name }) => {
           </Col>
           <Col className="S-box-line-two">
             <div className="image-container div-center">
-              <div className="image-logo">
-                <img
-                  src={require("../images/Ground.png")}
-                  style={{ width: "16em" }}
-                />
+              <div className="image-logo div-center">
+                <img src={require("../images/Ground.png")} />
               </div>
               <a
                 className="link"
@@ -144,11 +139,8 @@ const Intro = ({ name }) => {
           </Col>
           <Col className="S-box-line-three">
             <div className="image-container div-center">
-              <div className="image-logo">
-                <img
-                  src={require("../images/subob.png")}
-                  style={{ width: "14.208em" }}
-                />
+              <div className="image-logo div-center">
+                <img src={require("../images/subob.png")} />
               </div>
               <a
                 className="link"
@@ -164,10 +156,10 @@ const Intro = ({ name }) => {
           </Col>
           <Col className="S-box-line-four ">
             <div className="image-container div-center">
-              <div className="image-logo">
+              <div className="image-logo div-center">
                 <img
                   src={require("../images/notissu.png")}
-                  style={{ width: "7.167em" }}
+                  style={{ width: "5.167em" }}
                 />
               </div>
               <div className="image-caption">
