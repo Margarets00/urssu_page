@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
 import Intro from "./intro"
-import Logo from "../images/Logo.png"
 import {
   Collapse,
   Navbar,
@@ -28,7 +27,7 @@ const Navigation = props => {
       <div>
         <Navbar className="Nav" fixed="top" color="white" light expand="md">
           <NavbarBrand href="/">
-            <img src={Logo} />
+            <img src={require("../images/Logo.png")} />
           </NavbarBrand>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>

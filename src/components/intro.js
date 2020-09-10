@@ -130,7 +130,7 @@ const Intro = ({ name }) => {
           <Col className="S-box-line-one">
             <div className="image-container div-center">
               <div className="image-logo div-center">
-                <img src={require("../images/logo.png")} />
+                <img src={require("../images/Logo.png")} />
               </div>
               <a
                 className="link"
