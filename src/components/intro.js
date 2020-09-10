@@ -235,101 +235,148 @@ const Intro = ({ name }) => {
         </div>
         <Row classNmae="Service" md="5" xs="5" style={{ height: "20.625em" }}>
           <Col>
-            <div className="Service_btn">
-              <div class="circle div-center orange">
-                <img src={Service_plan} />
+            <a
+              href="https://www.notion.so/7c3a060207ad4ae488700ecba8ec740e"
+              target="blank"
+            >
+              <div className="Service_btn">
+                <div class="circle div-center orange">
+                  <img src={Service_plan} />
+                </div>
+                <div class="back_circle bg_orange"></div>
               </div>
-              <div class="back_circle bg_orange"></div>
-            </div>
 
-            <p>기획</p>
+              <p>기획</p>
+            </a>
           </Col>
           <Col className="">
-            <div className="Service_btn ">
-              <div class="circle div-center orange">
-                <img src={Service_marketing} />
+            <a
+              href="https://www.notion.so/7c3a060207ad4ae488700ecba8ec740e"
+              target="blank"
+            >
+              <div className="Service_btn ">
+                <div class="circle div-center orange">
+                  <img src={Service_marketing} />
+                </div>
+                <div class="back_circle bg_orange"></div>
               </div>
-              <div class="back_circle bg_orange"></div>
-            </div>
-            <p>마케팅</p>
+              <p>마케팅</p>
+            </a>
           </Col>
           <Col>
-            <div className="Service_btn">
-              <div class="circle div-center orange">
-                <img src={Service_HR} />
+            <a
+              href="https://www.notion.so/HR-a4d3c296cb7546148b7ed5e581093df8"
+              target="blank"
+            >
+              <div className="Service_btn">
+                <div class="circle div-center orange">
+                  <img src={Service_HR} />
+                </div>
+                <div class="back_circle bg_orange"></div>
               </div>
-              <div class="back_circle bg_orange"></div>
-            </div>
-            <p>HR</p>
+              <p>HR</p>
+            </a>
           </Col>
           <Col>
-            <div className="Service_btn">
-              <div class="circle div-center red">
-                <img src={Service_Contentes} />
+            <a
+              href="https://www.notion.so/e5a88c57ddb94024b879a1c018c80895"
+              target="blank"
+            >
+              <div className="Service_btn">
+                <div class="circle div-center red">
+                  <img src={Service_Contentes} />
+                </div>
+                <div class="back_circle bg_red"></div>
               </div>
-              <div class="back_circle bg_red"></div>
-            </div>
-            <p>콘텐츠</p>
+              <p>콘텐츠</p>
+            </a>
           </Col>
           <Col>
-            <div className="Service_btn">
-              <div class="circle div-center red">
-                <img src={Service_UXUI} />
+            <a
+              href="https://www.notion.so/UX-UI-c88298b0143943c3ada9e8d57c3f0c35"
+              target="blank"
+            >
+              <div className="Service_btn">
+                <div class="circle div-center red">
+                  <img src={Service_UXUI} />
+                </div>
+                <div class="back_circle bg_red"></div>
               </div>
-              <div class="back_circle bg_red"></div>
-            </div>
-            <p>UX/UI</p>
+              <p>UX/UI</p>
+            </a>
           </Col>
           <Col>
-            <div className="Service_btn">
-              <div class="circle div-center green">
-                <img src={Service_backend} />
+            <a
+              href="https://www.notion.so/55a0280970dd473e97c43c8330b948e0"
+              target="blank"
+            >
+              <div className="Service_btn">
+                <div class="circle div-center green">
+                  <img src={Service_backend} />
+                </div>
+                <div class="back_circle bg_green"></div>
               </div>
-              <div class="back_circle bg_green"></div>
-            </div>
-            <p>back-end</p>
+              <p>back-end</p>
+            </a>
           </Col>
           <Col>
-            <div className="Service_btn">
-              <div class="circle div-center green">
-                <img src={Service_frontend} />
+            <a
+              href="https://www.notion.so/9ad8da80a73c4113a173699b53fba532"
+              target="blank"
+            >
+              <div className="Service_btn">
+                <div class="circle div-center green">
+                  <img src={Service_frontend} />
+                </div>
+                <div class="back_circle bg_green"></div>
               </div>
-              <div class="back_circle bg_green"></div>
-            </div>
-            <p>front-end</p>
+              <p>front-end</p>
+            </a>
           </Col>
           <Col>
-            <div className="Service_btn">
-              <div class="circle div-center green">
-                <img src={Service_android} />
+            <a
+              href="https://www.notion.so/7967510ce9374ca2becdb234cd83517c"
+              target="blank"
+            >
+              <div className="Service_btn">
+                <div class="circle div-center green">
+                  <img src={Service_android} />
+                </div>
+                <div class="back_circle bg_green"></div>
               </div>
-              <div class="back_circle bg_green"></div>
-            </div>
-            <div className="Service-name">
-              <p>Android</p>
-            </div>
+              <div className="Service-name">
+                <p>Android</p>
+              </div>
+            </a>
           </Col>
           <Col>
-            <div className="Service_btn">
-              <div class="circle div-center green">
-                <img src={Service_IOS} />
+            <a href="https://google.com" target="blank">
+              <div className="Service_btn">
+                <div class="circle div-center green">
+                  <img src={Service_IOS} />
+                </div>
+                <div class="back_circle bg_green"></div>
               </div>
-              <div class="back_circle bg_green"></div>
-            </div>
-            <p>IOS</p>
+              <p>IOS</p>
+            </a>
           </Col>
           <Col>
-            <div className="Service_btn">
-              <div class="circle div-center green">
-                <img src={Service_machinelearning} />
+            <a
+              href="https://www.notion.so/7c3a060207ad4ae488700ecba8ec740e"
+              target="blank"
+            >
+              <div className="Service_btn">
+                <div class="circle div-center green">
+                  <img src={Service_machinelearning} />
+                </div>
+                <div class="back_circle bg_green"></div>
               </div>
-              <div class="back_circle bg_green"></div>
-            </div>
-            <p>
-              Machine
-              <br />
-              Learning
-            </p>
+              <p>
+                Machine
+                <br />
+                Learning
+              </p>
+            </a>
           </Col>
         </Row>
         <div style={{ margin: "9.250em 0 2.5em 0" }}>
@@ -490,36 +537,47 @@ const Intro = ({ name }) => {
           style={{ fontSize: "0.708em" }}
         >
           <Col>
-            <div className="contact-icon">
-              <img src={require("../images/contact-kakao.png")} />
-              <img src={require("../images/contact-kakao-hover.png")} />
-            </div>
-            <p>플러스친구</p>
+            <a href="http://pf.kakao.com/_AxfrxeT" target="blank">
+              <div className="contact-icon">
+                <img src={require("../images/contact-kakao.png")} />
+                <img src={require("../images/contact-kakao-hover.png")} />
+              </div>
+              <p>플러스친구</p>
+            </a>
           </Col>
           <Col>
-            <div className="contact-icon">
-              <img src={require("../images/contact-insta.png")} />
-              <img src={require("../images/contact-insta-hover.png")} />
-            </div>
-            <div className="contact-text">
-              <p>인스타그램</p>
-            </div>
+            <a
+              href="https://www.instagram.com/ground_yourssu/?hl=ko"
+              target="blank"
+            >
+              <div className="contact-icon">
+                <img src={require("../images/contact-insta.png")} />
+                <img src={require("../images/contact-insta-hover.png")} />
+              </div>
+              <div className="contact-text">
+                <p>인스타그램</p>
+              </div>
+            </a>
           </Col>
           <Col>
-            <div className="contact-icon">
-              <img src={require("../images/contact-facebook.png")} />
-              <img src={require("../images/contact-facebook-hover.png")} />
-            </div>
-            <div className="contact-text">
-              <p>페이스북</p>
-            </div>
+            <a href="https://www.facebook.com/yourssu/" target="blank">
+              <div className="contact-icon">
+                <img src={require("../images/contact-facebook.png")} />
+                <img src={require("../images/contact-facebook-hover.png")} />
+              </div>
+              <div className="contact-text">
+                <p>페이스북</p>
+              </div>
+            </a>
           </Col>
           <Col>
-            <div className="contact-icon">
-              <img src={require("../images/contact-blog.png")} />
-              <img src={require("../images/contact-blog-hover.png")} />
-            </div>
-            <p>기술블로그</p>
+            <a href="https://yourssu-dev.github.io/" target="blank">
+              <div className="contact-icon">
+                <img src={require("../images/contact-blog.png")} />
+                <img src={require("../images/contact-blog-hover.png")} />
+              </div>
+              <p>기술블로그</p>
+            </a>
           </Col>
         </Row>
       </Container>
